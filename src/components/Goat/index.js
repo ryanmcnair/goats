@@ -52,7 +52,7 @@ export default class Goat extends Component {
             <button className='btn btn-danger' id={goat.id} onClick={(e) => removeGoat(e)}>REMOVE GOAT</button>
           </div>
             <button className="btn btn-info my-2" onClick={this.editGoat}>{edit ? 'CLOSE FORM' : 'OPEN FORM'}</button>
-            { edit && (<GoatForm addUpdateGoat={addUpdateGoat()} />)}
+            { edit && (<GoatForm goat={goat} addUpdateGoat={addUpdateGoat} />)}
         </div>
       </div>
     );
